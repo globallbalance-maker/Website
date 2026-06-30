@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
@@ -11,13 +11,9 @@ import { offices } from '../data/team';
 export function Contacts() {
   const [submitted, setSubmitted] = useState(false);
 
- const form = useRef<HTMLFormElement>(null);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    (window as any).emailjs.sendForm('12345', 'template_v4oya2v', form.current, 'nru-qaFWz4lTJ-OSd')
-      .then(() => setSubmitted(true))
-      .catch(() => alert('Грешка при изпращане. Моля опитайте отново.'));
+    setSubmitted(true);
   };
 
   return (
@@ -43,11 +39,11 @@ export function Contacts() {
                 <Button className="mt-4" onClick={() => setSubmitted(false)}>Изпрати ново съобщение</Button>
               </div>
             ) : (
-             <form onSubmit={handleSubmit} ref={form} className="space-y-4">
-                <Input name="name" placeholder="Три имена *" required />
-<Input name="email" type="email" placeholder="Email адрес *" required />
-<Input name="phone" type="tel" placeholder="Телефонен номер *" required />
-<Textarea name="message" placeholder="Вашето съобщение *" required />
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <Input placeholder="Три имена *" required />
+                <Input type="email" placeholder="Email адрес *" required />
+                <Input type="tel" placeholder="Телефонен номер *" required />
+                <Textarea placeholder="Вашето съобщение *" required />
                 <Button type="submit" size="lg" className="w-full">Изпрати</Button>
               </form>
             )}
