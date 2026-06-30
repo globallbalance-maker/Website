@@ -40,10 +40,10 @@ export function Contacts() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <Input placeholder="Три имена *" required />
-                <Input type="email" placeholder="Email адрес *" required />
-                <Input type="tel" placeholder="Телефонен номер *" required />
-                <Textarea placeholder="Вашето съобщение *" required />
+                <Input name="name" placeholder="Три имена *" required />
+<Input name="email" type="email" placeholder="Email адрес *" required />
+<Input name="phone" type="tel" placeholder="Телефонен номер *" required />
+<Textarea name="message" placeholder="Вашето съобщение *" required />
                 <Button type="submit" size="lg" className="w-full">Изпрати</Button>
               </form>
             )}
