@@ -4,7 +4,7 @@ export interface Service {
   description: string;
   shortDescription: string;
   duration: string;
-  price?: number;
+  price: number;
   icon: string;
   image?: string;
   details?: string[];
@@ -26,7 +26,6 @@ export const services: Service[] = [
   {
     id: '2',
     name: 'Райф терапия със Spooky2',
-    shortDescription: 'Биорезонансна и честотна терапевтична система за подпомагане на организма.',
     description: 'Spooky2 е иновативна биорезонансна и честотна терапевтична система. Тя се основава на принципите на Райф терапията, според която всяка клетка и патоген (бактерия, вирус) имат своя собствена уникална честота. Чрез излъчване на съответната честота, патогените се неутрализират без да се увреждат здравите тъкани.',
     details: [
       'Физическо ниво – подпомагане на общия тонус и възстановителните процеси.',
