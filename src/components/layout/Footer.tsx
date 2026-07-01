@@ -28,8 +28,8 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-4 mt-6">
               <a href="https://www.facebook.com/profile.php?id=61565586796190&locale=bg_BG" target="_blank" rel="noopener noreferrer" className="text-stone-400 hover:text-violet-400 transition-colors"><Facebook className="h-5 w-5" /></a>
-              <a href="#" className="text-stone-400 hover:text-violet-400 transition-colors"><Instagram className="h-5 w-5" /></a>
-              <a href="#" className="text-stone-400 hover:text-violet-400 transition-colors"><Youtube className="h-5 w-5" /></a>
+              
+              
             </div>
           </div>
 
