@@ -42,7 +42,7 @@ export function Services() {
                       <img
                         src={service.image}
                         alt={service.name}
-                        className={`w-full rounded-xl object-contain${service.id === '2' ? ' max-h-[420px]' : ''}`}
+                        className={`w-full rounded-xl object-contain${service.id === '2' ? ' max-h-[540px]' : ''}`}
                       />
                     </div>
                   )}
