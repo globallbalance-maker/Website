@@ -35,7 +35,7 @@ export const services: Service[] = [
     ],
     duration: '45–90 минути',
     icon: 'Zap',
-    image: '/rife-therapy-cellular.png',
+    image: '/u5173154389_Cellular_communication_and_biological_resonance_s_f12a69d9-df86-4fb3-96aa-f9aeb122134c_0_(1).png',
   },
   {
     id: '3',

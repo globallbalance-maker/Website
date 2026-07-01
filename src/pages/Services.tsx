@@ -38,11 +38,11 @@ export function Services() {
               <Card key={service.id} className="overflow-hidden">
                 <div className="grid md:grid-cols-2 gap-6">
                   {service.image && (
-                    <div className="p-6 flex items-start">
+                    <div className="p-6 flex items-center justify-center">
                       <img
                         src={service.image}
                         alt={service.name}
-                        className="w-full rounded-xl object-contain"
+                        className={`w-full rounded-xl object-contain${service.id === '2' ? ' max-h-[420px]' : ''}`}
                       />
                     </div>
                   )}
