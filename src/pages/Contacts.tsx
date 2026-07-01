@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
@@ -10,10 +10,12 @@ import { offices } from '../data/team';
 
 export function Contacts() {
   const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
+const form = useRef<HTMLFormElement>(null);
+ const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    (window as any).emailjs.sendForm('12345', 'template_v4oya2v', form.current, 'nru-qaFWz4lTJ-OSd')
+      .then(() => setSubmitted(true))
+      .catch(() => alert('Грешка при изпращане. Моля опитайте отново.'));
   };
 
   return (
