@@ -38,11 +38,11 @@ export function Services() {
               <Card key={service.id} className="overflow-hidden">
                 <div className="grid md:grid-cols-2 gap-6">
                   {service.image && (
-                    <div className="p-6 flex items-center justify-center">
+                    <div className="p-6 flex items-start">
                       <img
                         src={service.image}
                         alt={service.name}
-                        className="w-full h-[300px] rounded-xl object-cover"
+                        className="w-full rounded-xl object-contain"
                       />
                     </div>
                   )}
@@ -53,7 +53,9 @@ export function Services() {
                       </div>
                       <h3 className="font-serif text-xl font-semibold text-stone-800">{service.name}</h3>
                     </div>
-                    <p className="text-stone-500 text-sm mb-4">{service.shortDescription}</p>
+                    {service.shortDescription && (
+                      <p className="text-stone-500 text-sm mb-4">{service.shortDescription}</p>
+                    )}
                     <div className="flex items-center gap-3 mb-4">
                       <Badge variant="secondary">{service.duration}</Badge>
                       {service.price !== undefined && <span className="text-violet-600 font-bold">{formatPrice(service.price)}</span>}
