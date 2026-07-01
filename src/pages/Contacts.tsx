@@ -39,7 +39,7 @@ export function Contacts() {
                 <Button className="mt-4" onClick={() => setSubmitted(false)}>Изпрати ново съобщение</Button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} ref={form} className="space-y-4">
                 <Input name="name" placeholder="Три имена *" required />
 <Input name="email" type="email" placeholder="Email адрес *" required />
 <Input name="phone" type="tel" placeholder="Телефонен номер *" required />
